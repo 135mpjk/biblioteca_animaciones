@@ -1,0 +1,394 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+}
+
+.container{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.titulo{
+    display: flex;
+    width: 100%;
+}
+.tituloJuan{
+    position: absolute;
+    font-size: 40px;
+    margin: auto;
+    right: 50%;
+    animation: ease;
+    animation-name: slideinTitle;
+    animation-duration: 3s;
+    color:rgb(223, 223, 223);
+    font-family: sans-serif;
+}
+
+.cabecera{
+    position: relative;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.cubo-P{
+    display: flex;
+    width: 200px;
+    height: 200px;
+    background-color: aqua;
+    animation: ease-in-out;
+    animation-name: slidein;
+    animation-duration: 3s;
+    justify-content: center;
+    font-size: 40px;
+    align-items: flex-start;
+    
+}
+
+.cubo1{transition: width 2s, height 2s, background-color 2s,transform 5s, opacity 6s; }
+.cubo2{transition: width 2s, height 2s, background-color 2s,transform 5s,}
+
+
+
+.cubo1:hover{
+    background-color: burlywood;
+    width: 280px;
+    height: 280px;
+    transform: scale(0.5);
+    align-items: center;
+    opacity: 0;
+}
+
+.cubo2{
+    background-color: chartreuse;
+}
+
+.cubo2:hover{
+    background-color: burlywood;
+    width: 280px;
+    height: 280px;
+    transform: scale(1);
+    align-items: center;
+}
+
+.michi{
+    display: flex;
+    width: 50%;
+    height: auto;
+    animation: ease-in-out;
+    animation-name: "";
+    animation-iteration-count: infinite;
+    animation-duration: 1s;
+    transition: transform 3s;
+}
+
+.michi:hover{
+    transform:rotate(360deg) ;
+}
+
+.cubo3{
+animation-iteration-count: infinite;
+animation-name: temblar;
+animation-duration: 3s;
+}
+
+
+.Menu{
+    display: flex;
+    width: 90%;
+    justify-content: center;
+}
+.Menu ul{
+    display: flex;
+    width: min-content;
+    height: min-content;
+    justify-content: space-between;
+    align-items: center;
+    padding-inline-start: 0;
+}
+
+.Menu ul li{
+    background-color:rgb(194, 194, 194);
+    display: flex;
+    align-items: center;
+    list-style: none;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 25px;
+    width: auto;
+    padding: 10px 15px;
+    margin: 10px;
+    height: 90%;
+    border-radius: 20px;
+    border: 1px solid black;
+    transition: border 2s, background-color 2s, box-shadow 3s;
+}
+
+.Menu ul li:hover{
+    background-color: rgb(194, 194, 245);
+    border: 1px solid blue;
+    box-shadow:4px 4px 14px 0px  rgba(224, 19, 19, 0.41);
+}
+
+/*  section de giros*/
+
+#Giros{
+    display: flex;
+    width: 99%;
+    height: auto;
+    justify-content: space-around;
+    background-color: darkgrey;
+
+}
+
+
+.card2{
+    display: flex; 
+   
+    height: 160px;
+    justify-content: center;
+    align-items: center;
+    justify-self: center;
+    align-self: center;
+    text-align: center;
+    margin: 20px;
+    transition: transform 3s;
+}
+.tarjeta{
+    width: 160px;
+    height: 300px;
+    justify-content: center;
+    justify-self: center;
+    align-self: center;
+    text-align: center;
+    margin: 20px;
+    transition: transform 3s;
+}
+
+.nombres{
+    font-family:sans-serif;
+    font-size: 22px;
+}
+
+.transiciones, .giros{
+    overflow-x: hidden;
+    display: grid;
+    position: relative;
+    width: 99%;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    justify-content: center;
+    align-items: center;
+    grid-template-rows: auto;
+    column-gap: 10px;
+    row-gap: 15px;
+}
+.titulos{
+    font-family: sans-serif;
+    font-size: 30px;
+}
+
+.botones{
+    border-radius: 20px;
+    border:none;
+    background-color: rgb(17, 17, 17);
+    color: white;
+    width: 105%;
+    margin-bottom: 5%;
+}
+@media screen and (min-width:421px) and (max-width:800px) {
+
+    .transiciones, .giros{
+        grid-template-columns:1fr 1fr;
+
+    }
+}
+@media screen and (min-width:375px) and (max-width:420px){
+
+    .transiciones, .giros{
+        grid-template-columns:1fr;
+
+    }
+
+}
+
+
+
+
+
+/* animacion */
+@keyframes slidein {
+    from {
+    margin-left: 100%;
+    }
+    to {
+        margin-left: 0%;
+    }
+}
+@keyframes slideinTitle {
+    from {
+    right: 100%;
+    }
+    to {
+        right:50%;
+    }
+}
+
+@keyframes slideup {
+    from {
+        margin-top:100%;
+    }
+    to {
+        margin-top:0%;
+    }
+}
+
+@keyframes temblar {
+
+    0% {
+        transform: rotate(0deg);
+    }
+    25%{
+        transform: rotate(20deg);
+    }
+    75%{
+        transform: rotate(-20deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+@keyframes llegadaDerecha {
+    0%{
+        opacity: 0;
+        transform:translateX(1000px) ;
+    }
+    60%{
+        opacity: 0.8;
+        transform: translateX(-80px)
+    }
+    80%{
+        opacity: 0.9;
+        transform: translateX(15px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+@keyframes llegadaIzquierda {
+    0%{
+        opacity: 0;
+        transform:translateX(-1000px) ;
+    }
+    60%{
+        opacity: 0.8;
+        transform: translateX(-80px)
+    }
+    80%{
+        opacity: 0.9;
+        transform: translateX(15px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+@keyframes llegadaArriba {
+    0%{
+        opacity: 0;
+        transform:translateY(-1000px) ;
+    }
+    60%{
+        opacity: 0.8;
+        transform: translateY(-80px)
+    }
+    80%{
+        opacity: 0.9;
+        transform: translateY(15px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+@keyframes llegadaAbajo {
+    0%{
+        opacity: 0;
+        transform:translateY(1000px) ;
+    }
+    60%{
+        opacity: 0.8;
+        transform: translateY(-80px)
+    }
+    80%{
+        opacity: 0.9;
+        transform: translateY(15px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+
+
+
+/* Giros */
+
+.Giro_completo:hover{
+transform: rotate(360deg);
+}
+
+.Giro_completo_left:hover{
+    transform: rotate(-360deg);
+}
+.Giro_medio_left:hover{
+    transform: rotate(-180deg);
+}
+.Giro_medio_right:hover{
+    transform: rotate(180deg);
+}
+.infinito:hover{
+	animation-name: infinito;
+	animation-duration: 3s;
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;
+}
+
+@keyframes infinito {
+  0% {
+    transform:rotate(0deg);
+  }
+  100% {
+    transform:rotate(360deg);
+  }
+}
+
+
+/* transiciones*/
+
+.animacion1{
+    animation-name: llegadaDerecha;
+    animation-duration: 3s;
+}
+.animacion2{
+    animation-name: llegadaIzquierda;
+    animation-duration: 3s;
+}
+.animacion3{
+    animation-name: llegadaArriba;
+    animation-duration: 2s;
+}
+.animacion4{
+    animation-name: llegadaAbajo;
+    animation-duration: 2s;
+}

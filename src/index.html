@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/estilos.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container">
+
+        <div class="cabecera">
+            <div class="titulo" style="height: 150px; overflow: hidden;"><svg viewBox="0 0 500 150"
+                    preserveAspectRatio="none" style="height: 100%; width: 100%;">
+                    <path d="M0.00,49.98 C149.99,150.00 220.93,-33.05 500.00,49.98 L500.00,0.00 L0.00,0.00 Z"
+                        style="stroke: none; fill: rgb(17, 17, 17);"></path>
+                </svg>
+                <h1 class="tituloJuan">Paula</h1>
+            </div>
+        </div>
+        <div class="Menu">
+            <ul>
+                <li>Giros</li>
+                <li>Transiciones</li>
+                <li>Zoom</li>
+                <li>Animaciones</li>
+            </ul>
+        </div>
+          <h2 class="titulos"> Giros</h2>
+        <section class="giros">
+            <div class="tarjeta">
+                <div class="card2 Giro_completo">
+                    <img src="./images/yy.svg">
+                </div>
+                <div><h1 class="nombres">Giro Completo</h1></div>
+            </div>
+            <div class="tarjeta">
+                <div class="card2 Giro_completo">
+                    <img src="./images/yy.svg">
+                </div>
+                <h1 class="nombres">Giro Completo a la derecha</h1>
+            </div>
+            <div class="tarjeta">
+                <div class="card2 Giro_completo_left">
+                    <img src="./images/yy.svg">
+                </div>
+                <h1 class="nombres">Giro Completo a la izqiuerda</h1>
+            </div>
+            <div class="tarjeta">
+                <div class="card2 Giro_medio_right">
+                    <img src="./images/yy.svg">
+                </div>
+                <h1 class="nombres">medio giro</h1>
+            </div>
+            <div class="tarjeta">
+                <div class="card2 Giro_medio_right">
+                    <img src="./images/yy.svg">
+                </div>
+                <h1 class="nombres">medio giro a la derecha</h1>
+            </div>
+            <div class="tarjeta">
+                <div class="card2 Giro_medio_left">
+                    <img src="./images/yy.svg">
+                </div>
+                <h1 class="nombres">medio giro a la izquierda</h1>
+            </div>
+            <div class="tarjeta">
+                <div class="card2 infinito">
+                    <img src="./images/yy.svg">
+                </div>
+                <h1 class="nombres">Giro infinito</h1>
+            </div>
+        </section>
+ <h2 class="titulos"> transiciones</h2>
+        <!-- seccion de trnasiciones -->
+        <section class="transiciones">
+            <div class="tarjeta">
+                <div id="caja2" class="card2">
+                    <img src="./images/yy.svg">
+                </div>
+                <button class="botones" onclick="boton2()"><h1 class="nombres">Llegada desde izquierda</h1></button>
+            </div>
+            <div class="tarjeta">
+                <div id="caja1" class="card2">
+                    <img src="./images/yy.svg">
+                </div>
+                <button class="botones" onclick="boton1()"><h1 class="nombres"> Llegada desde derecha</h1></button>
+            </div>
+            <div class="tarjeta">
+                <div id="caja3" class="card2">
+                    <img src="./images/yy.svg">
+                </div>
+                <button class="botones" onclick="boton3()"><h1 class="nombres">Llegada desde arriba</h1></button>
+            </div>
+            <div class="tarjeta">
+                <div id="caja4" class="card2">
+                    <img src="./images/yy.svg">
+                </div>
+                <button class="botones" onclick="boton4()"><h1 class="nombres">Llegada desde abajo</h1></button>
+            </div>
+        </section>
+    </div>
+    <script src="./js/animaciones.js"></script>
+</body>
+
+</html>
