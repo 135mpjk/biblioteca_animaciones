@@ -105,6 +105,7 @@ animation-duration: 3s;
     display: flex;
     width: 90%;
     justify-content: center;
+    text-decoration: none;
 }
 .Menu ul{
     display: flex;
@@ -113,6 +114,8 @@ animation-duration: 3s;
     justify-content: space-between;
     align-items: center;
     padding-inline-start: 0;
+    color: black;
+    text-decoration: none;
 }
 
 .Menu ul li{
@@ -129,6 +132,9 @@ animation-duration: 3s;
     border-radius: 20px;
     border: 1px solid black;
     transition: border 2s, background-color 2s, box-shadow 3s;
+    color: black;
+    text-decoration: none;
+    
 }
 
 .Menu ul li:hover{
@@ -391,4 +397,190 @@ transform: rotate(360deg);
 .animacion4{
     animation-name: llegadaAbajo;
     animation-duration: 2s;
+}
+
+
+@import "compass/css3";
+
+*, *:before, *:after {
+  box-sizing: border-box;
+  margin: 0;
+}
+#caja_animaciones {
+  font-size: 62.5%;
+  height: 100%;
+  overflow: hidden;
+}
+.scene {
+  position: relative;
+  height: 100%;
+  background: #1d1f20;
+  padding: 20rem;
+  text-align: center;
+}
+#titulo_animaciones {
+  position: relative;
+  font-size: 8rem;
+  text-transform: uppercase;
+  font-family: test;
+  color: #fff;
+  z-index: 10;
+}
+.magic {
+  z-index: 5;
+  position: absolute;
+  top: calc(50% - 10rem);
+  left: calc(44% - 10rem);
+  width: 30rem;
+  height: 30rem;
+  background: url("../images/china.jpg") 50% 50% no-repeat fixed;
+  background-size: cover;
+  border-radius: 50%;
+}
+
+
+
+.animaciones{
+    width: 100%;
+    text-align: center;
+
+}
+.titulo_arcoiris{
+    font-size: 30px;
+    font-family: sans-serif;
+    padding: 1%;
+    background: linear-gradient(to right, red, orange, yellow, rgb(3, 199, 3), blue);
+}
+.animacion_yinyang{
+    display: flex;
+    height: 30vh;
+    align-items: center;
+    padding: 20px;
+    margin-right: 150px;
+}
+
+
+
+.fa-yin-yang{
+    font-size: 1000%;
+    animation-name: colores;
+    animation-duration: 4s;
+    position: relative;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+@keyframes colores {
+    0%{color: red;left: 0%;}
+    10%{color: rgb(253, 161, 40);left:20%;}
+    20%{color: rgb(255, 251, 23);left: 40%;}
+    30%{color: rgb(0, 212, 0);left: 60%;}
+    40%{color: rgb(70, 196, 247);left: 80%;}
+    50%{color: rgb(72, 17, 175); left: 100%;}
+    60%{color:rgb(70, 196, 247);left: 80%;}
+    70%{color: rgb(0, 212, 0);left: 60%;}
+    80%{color: rgb(255, 251, 23);left: 40%;}
+    90%{color: rgb(253, 161, 40);left:20%;}
+    100%{color: red;left: 0%;}
+}
+.titulo_rebote{
+    font-size: 30px;
+    font-family: sans-serif;
+    background-color: rgb(17, 17, 17);
+    color: rgb(243, 243, 243);
+    padding: 2%;
+}
+.animacion_rebote{
+    align-items: center;
+    padding-top:2%;
+    height: 23vh;
+    background-color: rgb(17, 17, 17);
+}
+
+.animacion_rebote h1{
+    animation: rebote .5s alternate infinite ease-in;
+    animation-duration: 1.5s;
+    display: inline-block;
+    font-size: 100px;
+    font-family: sans-serif;
+    color: rgb(223, 223, 223);
+}
+
+@keyframes rebote {
+    0%{
+        transform: translateX(0%);
+    }
+    50%{
+        transform: translateX(300%);
+    }
+    100%{
+        transform:translateX(-300%);
+    }
+    
+}
+.titulo_planeta{
+    font-size: 30px;
+    font-family: sans-serif;
+    background-color: rgb(0, 6, 73);
+    color: rgb(243, 243, 243);
+    padding: 2%;
+}
+
+.animacion_planeta{
+    width: 100%;
+    height: 40vh;
+    
+}
+.nubes{
+    height: 40vh;
+    background-color: rgb(0, 6, 73);
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+.nubes img{
+    width: 290px;
+    height: 245px;
+    position: relative;
+    z-index: 20;
+}
+.mapa{
+    width: 230px;
+    height: 230px;
+    background: rgb(118, 209, 245);
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    box-shadow: -35px -20px 0 0 rgba(0,0,0,.15) inset,
+                -65px -30px 0 0 rgba(0,0,0,.1) inset,
+                6px 5px 0 0 rgba(255,255,255,.2) inset;
+    background: url(../images/mapa.jpg);
+    background-size:cover;
+
+    -webkit-animation: planeta_girando 5s infinite linear;
+}
+
+@-webkit-keyframes planeta_girando{
+    from{
+        background-position:left center;
+    }
+    to {
+        background-position: -408px center;
+    }
+}
+
+@media screen and (min-width: 1300px) {
+    .nubes img{
+        margin-top:3%;
+    } 
+}
+@media screen and (max-width: 600px) {
+    .Menu ul li{
+        font-size: 15px;
+    }
 }
